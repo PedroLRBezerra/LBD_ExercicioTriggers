@@ -15,6 +15,8 @@ golsA INT ,
 golsB INT,
 dia date not null,
 PRIMARY KEY(timeA,timeB,dia)
+FOREIGN KEY (timeA) REFERENCES times(codigo),
+FOREIGN KEY (timeB) REFERENCES times(codigo)
 )
 
 
@@ -43,7 +45,7 @@ insert times Values
 insert times Values 
 (2,'Celta de Vigo','CEL')
 insert times Values 
-(3,'Málaga','MAL')
+(3,'MÃ¡laga','MAL')
 insert times Values 
 (4,'Real Madrid','RMA')
 
